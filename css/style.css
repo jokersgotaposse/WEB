@@ -3674,7 +3674,7 @@ p.single-price-text {
 		width: 48%;
 	}
 	.agilemodel-slider {
-		height: 420px!important;
+		height: 300px!important;
 	}
 	.film_roll_wrapper {
 		height: 420px!important;
@@ -5305,7 +5305,7 @@ p.single-price-text {
 		margin-left: 0; 
 	} 
 	.agilemodel-slider {
-		height: 320px!important;
+		height: 120px!important;
 	}
 	.film_roll_prev, .film_roll_next { 
 		top: 60% !important; 
