@@ -3674,7 +3674,7 @@ p.single-price-text {
 		width: 48%;
 	}
 	.agilemodel-slider {
-		height: 300px!important;
+		height: 600px!important;
 	}
 	.film_roll_wrapper {
 		height: 300px!important;
@@ -4016,7 +4016,7 @@ p.single-price-text {
 
 @media screen and (max-width: 960px) {
 	.w3slideraits {
-		height: 550px;
+		height: 700px;
 	}
 	div#small-dialog1, div#small-dialog2, div#small-dialog3, div#small-dialog4 {
 		width: 35%;
@@ -4486,7 +4486,7 @@ p.single-price-text {
 		margin-left: 9em; 
 	} 
 	.w3slideraits {
-		height: 400px;
+		height: 667px;
 	}
 	.wthreehome-latest {
 		padding: 40px 0; 
@@ -5305,7 +5305,7 @@ p.single-price-text {
 		margin-left: 0; 
 	} 
 	.agilemodel-slider {
-		height: 235px!important;
+		height: 500px!important;
 	}
 	.film_roll_prev, .film_roll_next { 
 		top: 36% !important; 
