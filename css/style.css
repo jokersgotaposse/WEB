@@ -684,7 +684,7 @@ a:focus, a:hover {
 
 	.w3slideraits {
 		position: relative;
-		height: 800px;
+		height: 600px;
 	}
 
 	#back_to_fluid_dg {
@@ -3489,7 +3489,7 @@ p.single-price-text {
 		right: 5.5%;
 	}
 	.w3slideraits {
-		height: 700px;
+		height: 500px;
 	}
 	.style-grid-1 img {
 		height: 632px;
@@ -3593,7 +3593,7 @@ p.single-price-text {
 		width: 75%;
 	}
 	.w3slideraits {
-		height: 600px;
+		height: 400px;
 	}
 	div#small-dialog1, div#small-dialog2, div#small-dialog3, div#small-dialog4 {
 		width: 30%;
@@ -4016,7 +4016,7 @@ p.single-price-text {
 
 @media screen and (max-width: 960px) {
 	.w3slideraits {
-		height: 550px;
+		height: 350px;
 	}
 	div#small-dialog1, div#small-dialog2, div#small-dialog3, div#small-dialog4 {
 		width: 35%;
@@ -4486,7 +4486,7 @@ p.single-price-text {
 		margin-left: 9em; 
 	} 
 	.w3slideraits {
-		height: 400px;
+		height: 300px;
 	}
 	.wthreehome-latest {
 		padding: 40px 0; 
@@ -4639,7 +4639,7 @@ p.single-price-text {
 } 
 @media screen and (max-width: 600px) {
 	.w3slideraits {
-		height: 350px;
+		height: 220px;
 	}
 	.style-grid-1-text h3, .style-grid-2-text h3 {
 		font-size: 17px;
@@ -4756,7 +4756,7 @@ p.single-price-text {
 		padding: 12px 0;
 	}
 	.w3slideraits {
-		height: 310px;
+		height: 200px;
 	}
 	.wthreehome-latest-grid h4 {
 		font-size: 14px; 
@@ -4907,7 +4907,7 @@ p.single-price-text {
 		margin: 0 4px;
 	}
 	.w3slideraits {
-		height: 260px;
+		height: 140px;
 	}
 	.wthreehome-latest {
 		padding: 25px 0;
@@ -5170,7 +5170,7 @@ p.single-price-text {
 } 
 @media screen and (max-width: 384px) {
 	.w3slideraits {
-		height: 220px;
+		height: 130;
 	}
 	.agileshoppinggrids-bottom-grid .wthreeshop-a a {
 		padding: 10px 30px;
@@ -5285,7 +5285,7 @@ p.single-price-text {
 		width: 46%;
 	}
 	.w3slideraits {
-		height:190px;
+		height:100px;
 	}
 }   
 @media screen and (max-width: 320px) {
