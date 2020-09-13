@@ -1106,10 +1106,10 @@ figure.effect-apollo:hover figcaption::before {
 	background-image: url("https://raw.githubusercontent.com/jokersgotaposse/WEB/master/images/rap%20class%20sale.jpg?token=AGWQBENOMTYFONHTAKZH4Q27K7CEI");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: auto;
-	-webkit-background-size: auto;
-	-moz-background-size: auto;
-	-o-background-size: auto;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
 	background-attachment: fixed;
 	text-align: center;
 }
