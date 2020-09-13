@@ -3674,19 +3674,19 @@ p.single-price-text {
 		width: 48%;
 	}
 	.agilemodel-slider {
-		height: 600px!important;
+		height: 700px!important;
 	}
 	.film_roll_wrapper {
-		height: 300px!important;
+		height: 700px!important;
 	}
 	.film_roll_shuttle {
-		height: 300px!important;
+		height: 700px!important;
 	}
 	.film_roll_child {
 		text-align: center;
 	}
 	.film_roll_wrapper img {
-		width: 50%;
+		width: 100%;
 	}
 	.wthreehome-latest {
 		background-color: #EEE;
@@ -4396,7 +4396,7 @@ p.single-price-text {
 		display: none;
 	}
 	ul.w3header-cart li.wthreecartaits {
-		display: block;
+		display: none;
 	}
 	li.wthreecartaits {
 		right: 10%;
@@ -5305,10 +5305,10 @@ p.single-price-text {
 		margin-left: 0; 
 	} 
 	.agilemodel-slider {
-		height: 500px!important;
+		height: 150px!important;
 	}
 	.film_roll_prev, .film_roll_next { 
-		top: 36% !important; 
+		top: 60% !important; 
 	}
 	.wthreehome-latest-grid {
 		float: none;
