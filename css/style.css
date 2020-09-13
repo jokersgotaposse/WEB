@@ -4016,7 +4016,7 @@ p.single-price-text {
 
 @media screen and (max-width: 960px) {
 	.w3slideraits {
-		height: 700px;
+		height: 500px;
 	}
 	div#small-dialog1, div#small-dialog2, div#small-dialog3, div#small-dialog4 {
 		width: 35%;
@@ -4486,7 +4486,7 @@ p.single-price-text {
 		margin-left: 9em; 
 	} 
 	.w3slideraits {
-		height: 667px;
+		height: 450px;
 	}
 	.wthreehome-latest {
 		padding: 40px 0; 
@@ -4639,7 +4639,7 @@ p.single-price-text {
 } 
 @media screen and (max-width: 600px) {
 	.w3slideraits {
-		height: 600px;
+		height: 400px;
 	}
 	.style-grid-1-text h3, .style-grid-2-text h3 {
 		font-size: 17px;
@@ -4756,7 +4756,7 @@ p.single-price-text {
 		padding: 12px 0;
 	}
 	.w3slideraits {
-		height: 480px;
+		height: 420px;
 	}
 	.wthreehome-latest-grid h4 {
 		font-size: 14px; 
@@ -4907,7 +4907,7 @@ p.single-price-text {
 		margin: 0 4px;
 	}
 	.w3slideraits {
-		height: 414px;
+		height: 370px;
 	}
 	.wthreehome-latest {
 		padding: 25px 0;
@@ -5170,7 +5170,7 @@ p.single-price-text {
 } 
 @media screen and (max-width: 384px) {
 	.w3slideraits {
-		height: 384px;
+		height: 340px;
 	}
 	.agileshoppinggrids-bottom-grid .wthreeshop-a a {
 		padding: 10px 30px;
@@ -5285,7 +5285,7 @@ p.single-price-text {
 		width: 46%;
 	}
 	.w3slideraits {
-		height:375px;
+		height:300px;
 	}
 }   
 @media screen and (max-width: 320px) {
@@ -5460,7 +5460,7 @@ p.single-price-text {
 		width: 289px;
 	}
 	.w3slideraits {
-		height:175px;
+		height:200px;
 	}
 } 
 /*-- //Responsive-Code --*/
