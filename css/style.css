@@ -1106,10 +1106,10 @@ figure.effect-apollo:hover figcaption::before {
 	background-image: url("https://raw.githubusercontent.com/jokersgotaposse/WEB/master/images/rap%20class%20sale.jpg?token=AGWQBENOMTYFONHTAKZH4Q27K7CEI");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover%;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
 	background-attachment: fixed;
 	text-align: center;
 }
@@ -1196,10 +1196,10 @@ figure.effect-apollo:hover figcaption::before {
 	background-image: url(https://i1.sndcdn.com/avatars-000451133196-81zq91-t500x500.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
 	background-attachment: fixed;
 	text-align: center;
 	padding: 300px 0;
@@ -3434,7 +3434,7 @@ p.single-price-text {
 		font-size: 25px;
 	}
 	.agileinfonewsl {
-		padding: 0px 0;
+		padding: 300px 0;
 	}
 	.about-us-text {
 		padding: 35px;
@@ -3674,13 +3674,13 @@ p.single-price-text {
 		width: 48%;
 	}
 	.agilemodel-slider {
-		height: 400px!important;
+		height: 530px!important;
 	}
 	.film_roll_wrapper {
-		height: 500px!important;
+		height: 530px!important;
 	}
 	.film_roll_shuttle {
-		height: 500px!important;
+		height: 530px!important;
 	}
 	.film_roll_child {
 		text-align: center;
@@ -3707,7 +3707,7 @@ p.single-price-text {
 		width: 85%;
 	}
 	.agileinfonewsl {
-		padding: 0px 0;
+		padding: 275px 0;
 	}
 	a.popup-with-zoom-anim:hover {
 		color: #ffffff;
@@ -3849,7 +3849,7 @@ p.single-price-text {
 		margin-top: 30px;
 	}
 	.agileinfonewsl {
-		padding: 0px 0;
+		padding: 230px 0;
 	}
 	.agileinfofooter-grid ul li {
 		line-height: 27px;
@@ -4099,7 +4099,7 @@ p.single-price-text {
 		font-size: 15px;
 	}
 	.agileinfonewsl {
-		padding: 0px 0;
+		padding: 200px 0;
 	}
 	.agileshoppinggrids-bottom-grid .wthreeshop-a a { 
 		padding: 10px 45px;
