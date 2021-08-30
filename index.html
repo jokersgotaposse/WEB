@@ -372,7 +372,20 @@
 
 		</div>
 		<!-- //Header-Top-Bar-(Hidden) -->
-        <model-viewer camera-controls src="gltf/sour melody record LP.gltf" alt="A 3D model of an astronaut"></model-viewer>
+      <model-viewer camera-controls id="shadow-intensity-demo" shadow-intensity="0" shadow-softness="0" environment-image="hdr/blue_lagoon_01k.hdr" alt="A 3D model of a sphere reflecting a forest with varying shadow intensity" src="gltf/sour melody record LP.gltf"></model-viewer>
+<script>
+(() => {
+  const modelViewer = document.querySelector('#shadow-intensity-demo');
+  const time = performance.now();
+
+  const animate = (now) => {
+    modelViewer.shadowIntensity = (4000);
+   
+  };
+
+  
+})();
+</script>
 
 
   
