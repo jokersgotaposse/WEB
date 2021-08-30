@@ -30,6 +30,7 @@
 
     <!-- Title -->
     <title>JGAP</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 <!-- //Meta-Tags -->
 
@@ -53,7 +54,14 @@
 <!-- Supportive-Modernizr-JavaScript --><script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 <!-- Default-JavaScript --><script src="js/jquery-2.2.3.js"></script>
-
+<style>
+	model-viewer{
+		width: 400px;
+		height: 600px;
+		margin: 0 auto;
+		
+		}
+</style>
 
 </head>
 <!-- //Head -->
@@ -62,7 +70,6 @@
 
 <!-- Body -->
 <body>
-
 
 
 	<!-- Header -->
@@ -323,6 +330,7 @@
 						<div class="pop_up">
 							<!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
@@ -365,7 +373,7 @@
 		</div>
 		<!-- //Header-Top-Bar-(Hidden) -->
         </div>
-
+        <model-viewer src="gltf/Bottle Only.gltf"></model-viewer>
 		<!-- Header-Slider -->
 	  <div class="w3slideraits">
       
