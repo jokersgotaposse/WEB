@@ -56,7 +56,7 @@
 <!-- Default-JavaScript --><script src="js/jquery-2.2.3.js"></script>
 <style>
 	model-viewer{
-		width: 1000px;
+		width: 1500px;
 		height: 600px;
 		margin: 0 auto;
 		
@@ -372,7 +372,82 @@
 
 		</div>
 		<!-- //Header-Top-Bar-(Hidden) -->
-       <model-viewer camera-controls camera-orbit="45deg 55deg 2.5m" src="gltf/sour melody record fix3.gltf" alt="A 3D model of an astronaut"></model-viewer>
+        <model-viewer id="envlight-demo" camera-controls src="gltf/sour melody record LP.gltf" skybox-image="hdr/graffiti_shelter_01k.hdr" alt="A 3D model of a damaged helmet"></model-viewer>
+
+<script type="module">
+  const modelViewer = document.querySelector("#envlight-demo");
+  modelViewer.addEventListener('contextmenu', event => event.preventDefault());
+  
+  let lastX;
+  let panning = false;
+  let skyboxAngle = 0;
+  let radiansPerPixel;
+      
+  const startPan = () => {
+    const orbit = modelViewer.getCameraOrbit();
+    const { radius } = orbit;
+    radiansPerPixel = -1 * radius / modelViewer.getBoundingClientRect().height;
+    modelViewer.interactionPrompt = 'none';
+  };
+  
+  const updatePan = (thisX) => {      
+    const delta = (thisX - lastX) * radiansPerPixel;
+    lastX = thisX;
+    skyboxAngle += delta;
+    const orbit = modelViewer.getCameraOrbit();
+    orbit.theta += delta;
+    modelViewer.cameraOrbit = orbit.toString();
+    modelViewer.resetTurntableRotation(skyboxAngle);
+    modelViewer.jumpCameraToGoal();
+  }
+  
+  modelViewer.addEventListener('mousedown', (event) => {
+    panning = event.button === 2 || event.ctrlKey || event.metaKey ||
+        event.shiftKey;
+    if (!panning)
+      return;
+
+    lastX = event.clientX;
+    startPan();
+    event.stopPropagation();
+  }, true);
+
+  modelViewer.addEventListener('touchstart', (event) => {
+    panning = event.touches.length === 2;
+    if (!panning)
+      return;
+
+    const {touches} = event;
+    lastX = 0.5 * (touches[0].clientX + touches[1].clientX);
+    startPan();
+  }, true);
+
+  modelViewer.addEventListener('mousemove', (event) => {
+    if (!panning)
+      return;
+
+    updatePan(event.clientX);
+    event.stopPropagation();
+  }, true);
+
+  modelViewer.addEventListener('touchmove', (event) => {
+    if (!panning || event.touches.length !== 2)
+      return;
+
+    const {touches} = event;
+    const thisX = 0.5 * (touches[0].clientX + touches[1].clientX);
+    updatePan(thisX);
+  }, true);
+
+  self.addEventListener('mouseup', (event) => {
+    panning = false;
+  }, true);
+  
+  self.addEventListener('touchend', (event) => {
+    panning = false;
+  }, true);
+</script>
+      
 		<!-- Header-Slider -->
 	  <div class="w3slideraits">
       
