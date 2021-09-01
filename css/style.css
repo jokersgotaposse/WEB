@@ -5,7 +5,17 @@
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/ 
 /*-- Reset-Code --*/ 
-	
+.container model {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered model {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}	
 .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
