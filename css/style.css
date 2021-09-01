@@ -5,6 +5,18 @@
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/ 
 /*-- Reset-Code --*/ 
+	model-viewer1{
+		width: 1200px;
+		height: 1000px;
+		margin: 0 auto;
+		
+		}
+		model-viewer2{
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+		
+		}
 .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
