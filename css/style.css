@@ -6,16 +6,14 @@
 --*/ 
 /*-- Reset-Code --*/ 
 
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}	
+	model-viewer{
+		width: 600px;
+		height: 600px;
+		margin: 0 auto;
+		
+		}
+
+
 .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
