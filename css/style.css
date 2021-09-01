@@ -5,6 +5,14 @@
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/ 
 /*-- Reset-Code --*/ 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 
 	model-viewer{
 		width: 1000px;
