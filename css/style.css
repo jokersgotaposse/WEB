@@ -13,13 +13,11 @@
   min-height: 100%;
 }
 
-model-container{
-	width: 100px;
-		height: 100px;
-		margin: 0 auto;
-	}
+
 	model-viewer{
-		
+		width: 1000px;
+		height: 1000px;
+		margin: 0 auto;
 		
 		}
 
