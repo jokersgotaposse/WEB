@@ -5,16 +5,16 @@
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/ 
 /*-- Reset-Code --*/ 
-.container model {
-  position: relative;
-  text-align: center;
-  color: white;
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
 }
-.centered model {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }	
 .video-responsive{
     overflow:hidden;
