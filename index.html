@@ -116,17 +116,40 @@ background-color: #000000;
 body {background-color: #000000;}
 
 .button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
   background-color: #04AA6D;
   border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .button4 {border-radius: 12px;}
+.buttoncontainer {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.buttoncenter {
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 </style>
 
 </head>
@@ -147,8 +170,11 @@ body {background-color: #000000;}
   
  <model-viewer camera-controls id="reveal" loading="eager" autoplay ar  shadow-intensity="1" src="gltf/joker spin3.gltf" alt="An animated 3D model of a robot">
     </model-viewer>
-    
-    <a href="home.html"><button class="button button4">Enter Site</button></a>
+    <div class="buttoncontainer">
+  <div class="buttoncenter">
+    <a href="home.html"><button class="button button4">Enter</button></a>
+    </div>
+    </div>
   </background>
   
 </body>
