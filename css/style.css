@@ -20,10 +20,14 @@ model-viewer {
 }
 
 .a {
+	width: 600px;
+	height: 600px;
   grid-column: 1 / 5;
   grid-row: 1 / 7;
 }
 .b {
+	width: 1000px;
+	height: 1000px;
   grid-column: 5 / 9;
   grid-row: 1 / 7;
 }
@@ -56,6 +60,7 @@ model-viewer {
   .b {
     grid-column: 1 / 7;
     grid-row: 5 / 7;
+	
   }
   .c {
     grid-column: 7 / 13;
