@@ -56,20 +56,20 @@
 <!-- Default-JavaScript --><script src="js/jquery-2.2.3.js"></script>
 <style>
 
-	model-viewer{
-		width: 1000px;
-		height: 1000px;
+		model-viewer{
+		width: 750px;
+		height: 750px;
 		margin: 0 auto;
+top: 100px;
+background-color: #000000;
+ model-viewer#reveal 
+    --poster-color: #000000;
+  }
+
 		
-		}
 		
 	
-	@media screen and (max-width: 1000px) {model-viewer{
-		width: 850px;
-		height: 850px;
-		margin: 0 auto;
-		
-		}}
+	
 	@media screen and (max-width: 800px) {
 		model-viewer{
 		width: 650px;
@@ -92,8 +92,8 @@
 		}}
 	@media screen and (max-width: 400px) {
 		model-viewer{
-		width: 350px;
-		height: 350px;
+		width: 325px;
+		height: 325px;
 		margin: 0 auto;
 		
 		}}
@@ -105,8 +105,8 @@
 		
 		}}
 	@media screen and (max-width: 200px) {model-viewer{
-		width: 175px;
-		height: 175px;
+		width: 150px;
+		height: 150px;
 		margin: 0 auto;
 		
 		}}
@@ -429,8 +429,7 @@
 
 
   
- <model-viewer camera-controls auto-rotate autoplay ar  shadow-intensity="1" src="gltf/joker spin3.gltf" alt="An animated 3D model of a robot">
-    </model-viewer>
+
   
 
         <model-viewer camera-controls exposure="1.22" auto-rotate id="shadow-intensity-demo" shadow-intensity="1" shadow-softness="1" environment-image="hdr/blue_lagoon_01k.hdr" alt="A 3D model of a sphere reflecting a forest with varying shadow intensity" src="gltf/sour melody record LP fix4.glb"></model-viewer>
