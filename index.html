@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700"	   type="text/css" media="all">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500" type="text/css" media="all">
 <!-- //Fonts -->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Font-Awesome-File-Links -->
 <!-- CSS --> <link rel="stylesheet" href="css/font-awesome.css" 		 type="text/css" media="all">
 <!-- TTF --> <link rel="stylesheet" href="fonts/fontawesome-webfont.ttf" type="text/css" media="all">
@@ -181,12 +181,36 @@ demo {
     <a href="home.html"><button class="button button4">Enter</button></a>
     </div>
     </div>
+    <div id="div1" class="fa"></div>
+
+<script>
+function hand() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf25a;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf256;";
+    }, 500);
+  setTimeout(function () {
+      a.innerHTML = "&#xf259;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf256;";
+    }, 1500);
+}
+hand();
+setInterval(hand, 2000);
+</script>
+
     <p id="demo"></p>
   </background>
   
 </body>
 
-<script>	<!-- Custom-JavaScript-File-Links -->
+	<!-- Custom-JavaScript-File-Links -->
+    
+    
+<script>
 var i = 0;
 var txt = 'Lorem ipsum typing effect!'; /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
