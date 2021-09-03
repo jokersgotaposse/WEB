@@ -58,7 +58,15 @@
 
 #div1 {
   font-size: 48px;
-  color: #FFF;
+  color: #FFFFFF;
+  height: 200px;
+  position: relative;
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 </style>
@@ -173,7 +181,18 @@ body {background-color: #000000;}
 
 
 
-   <div id="div1" class="fa"></div>
+  
+
+
+  
+ <model-viewer camera-controls id="reveal" loading="eager" autoplay ar  shadow-intensity="1" src="gltf/joker spin3.gltf" alt="An animated 3D model of a robot">
+    </model-viewer>
+    <div class="buttoncontainer">
+  <div class="buttoncenter">
+    <a href="home.html"><button class="button button4">Enter</button></a>
+    </div>
+    </div>
+     <div id="div1" class="fa"></div>
 
 <script>
 function hand() {
@@ -193,16 +212,6 @@ function hand() {
 hand();
 setInterval(hand, 2000);
 </script>
-
-
-  
- <model-viewer camera-controls id="reveal" loading="eager" autoplay ar  shadow-intensity="1" src="gltf/joker spin3.gltf" alt="An animated 3D model of a robot">
-    </model-viewer>
-    <div class="buttoncontainer">
-  <div class="buttoncenter">
-    <a href="home.html"><button class="button button4">Enter</button></a>
-    </div>
-    </div>
  
    
   </background>
