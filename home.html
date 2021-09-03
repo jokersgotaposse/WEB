@@ -110,67 +110,7 @@
 
 </style>
 <style>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 42px;
-  background: #f7f7f7;
-}
-span {
-  margin: 0 15px;
-  line-height: 0.7;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
-  animation: span 3s ease-in infinite alternate;
-}
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 
-  @media (max-width: 600px) {
-    transform: scale(0.65);
-  }
-}
-.letter {
-  display: inline-flex;
-  height: 30px;
-  width: 27px;
-  /* border: 2.5px solid #FF1EAD; */
-  border: 2.35px solid black;
-  border-radius: 14px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.45);
-
-  animation: letter 3s ease-in-out infinite alternate;
-}
-@keyframes span {
-  0%,
-  30% {
-    margin: 0 15px;
-  }
-  70%,
-  100% {
-    margin: 0 5px;
-  }
-}
-@keyframes letter {
-  0%,
-  30% {
-    width: 27px;
-  }
-  70%,
-  100% {
-    width: 30vw;
-  }
-}
 
     
 
@@ -487,18 +427,6 @@ span {
 		<!-- //Header-Top-Bar-(Hidden) -->
 
 
-
-<div class="main">
-	<span>S</span>
-	<span>P</span>
-	<span>A</span>
-	<span>C</span>
-	<span>I</span>
-	<span class="letter"></span>
-	<span>U</span>
-	<span>S</span>
-</div>
-  
 
         <model-viewer camera-controls exposure="1.22" auto-rotate id="shadow-intensity-demo" shadow-intensity="1" shadow-softness="1" environment-image="hdr/blue_lagoon_01k.hdr" alt="A 3D model of a sphere reflecting a forest with varying shadow intensity" src="gltf/sour melody record LP fix4.glb"></model-viewer>
 
