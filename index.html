@@ -175,12 +175,24 @@ body {background-color: #000000;}
     <a href="home.html"><button class="button button4">Enter</button></a>
     </div>
     </div>
+    <p id="demo"></p>
   </background>
   
 </body>
 
-	<!-- Custom-JavaScript-File-Links -->
+<script>	<!-- Custom-JavaScript-File-Links -->
+var i = 0;
+var txt = 'Lorem ipsum typing effect!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
 
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
 <!-- Default-JavaScript --><script src="js/jquery-2.2.3.js"></script>
 <script src="js/modernizr.custom.js"></script>
 	<!-- Custom-JavaScript-File-Links -->
