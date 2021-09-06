@@ -19,8 +19,8 @@
   position: relative;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+    width: 100%    !important;
+  height: auto   !important;
 }
 
 
@@ -34,7 +34,7 @@
 .video-responsive iframe{
     left:0;
     top:0;
-    height:100%;
+    height:auto;
     width:100%;
     position:absolute;
 }
@@ -55,7 +55,7 @@
 
     top:0;
 
-    height:100%;
+    height:auto;
 
     width:100%;
 
