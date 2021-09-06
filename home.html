@@ -908,7 +908,7 @@ var particleAlphabet = {
   Particle: function(x, y) {
     this.x = x;
     this.y = y;
-    this.radius = 4.5;
+    this.radius = 3.5;
     this.draw = function(ctx) {
       ctx.save();
       ctx.translate(this.x, this.y);
@@ -980,7 +980,7 @@ var particleAlphabet = {
       pPos = particleAlphabet.particlePositions[i];
       if (particleAlphabet.particles.indexOf(p) === particleAlphabet.particlePositions.indexOf(pPos)) {
       p.x += (pPos.x - p.x) * .3;
-      p.y += (pPos.y - p.y) * .1;
+      p.y += (pPos.y - p.y) * .3;
       p.draw(particleAlphabet.ctx);
     }
     }
