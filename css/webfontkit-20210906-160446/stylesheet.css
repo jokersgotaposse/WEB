@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'steinerregular';
-    src: url('webfontkit-20210906-160446/steiner-webfont.woff2') format('woff2'),
-url('webfontkit-20210906-160446/steiner-webfont.woff') format('woff');
+    src: url('../steiner-webfont.woff2') format('woff2'),
+url('../steiner-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -28,8 +28,8 @@ url('webfontkit-20210906-160446/steiner-webfont.woff') format('woff');
 
 @font-face {
     font-family: 'kleinsthreefsregular';
-    src: url('webfontkit-20210906-160446/kleinsthreefs-webfont.woff2') format('woff2'),
-url('webfontkit-20210906-160446/kleinsthreefs-webfont.woff') format('woff');
+    src: url('../kleinsthreefs-webfont.woff2') format('woff2'),
+url('../kleinsthreefs-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -40,8 +40,8 @@ url('webfontkit-20210906-160446/kleinsthreefs-webfont.woff') format('woff');
 
 @font-face {
     font-family: 'pixel_distortionmedium';
-    src: url('webfontkit-20210906-160446/pixel_distortion-webfont.woff2') format('woff2'),
-url('webfontkit-20210906-160446/pixel_distortion-webfont.woff') format('woff');
+    src: url('../pixel_distortion-webfont.woff2') format('woff2'),
+url('../pixel_distortion-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -52,8 +52,8 @@ url('webfontkit-20210906-160446/pixel_distortion-webfont.woff') format('woff');
 
 @font-face {
     font-family: 'pixel_calculonregular';
-    src: url('webfontkit-20210906-160446/pixel_calculon-webfont.woff2') format('woff2'),
-url('webfontkit-20210906-160446/pixel_calculon-webfont.woff') format('woff');
+    src: url('../pixel_calculon-webfont.woff2') format('woff2'),
+url('../pixel_calculon-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -64,8 +64,8 @@ url('webfontkit-20210906-160446/pixel_calculon-webfont.woff') format('woff');
 
 @font-face {
     font-family: 'pixel_countdownregular';
-    src: url('webfontkit-20210906-160446/pixel_countdown-webfont.woff2') format('woff2'),
-url('webfontkit-20210906-160446/pixel_countdown-webfont.woff') format('woff');
+    src: url('../pixel_countdown-webfont.woff2') format('woff2'),
+url('../pixel_countdown-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -76,8 +76,8 @@ url('webfontkit-20210906-160446/pixel_countdown-webfont.woff') format('woff');
 
 @font-face {
     font-family: 'pixelnonsensregular';
-    src: url('webfontkit-20210906-160446/pixelnonsens-webfont.woff2') format('woff2'),
-url('webfontkit-20210906-160446/pixelnonsens-webfont.woff') format('woff');
+    src: url('../pixelnonsens-webfont.woff2') format('woff2'),
+url('../pixelnonsens-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
