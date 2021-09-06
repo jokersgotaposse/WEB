@@ -111,45 +111,13 @@
 
 </style>
 <style>
-body {
-  overflow: hidden;
-  font-family: "Ubuntu", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-div {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-h1 {
-  font-size: 4.3em;
-  letter-spacing: -4px;
-  font-weight: 700;
-  color: #7e2ea0;
-  text-align: center;
-}
-
-.cssanimation,
-.cssanimation span {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.cssanimation span {
-  display: inline-block;
-}
-
-.leRotateSkateInLeft span {
-  animation-name: leRotateSkateInLeft;
-}
-@keyframes leRotateSkateInLeft {
-  from {
-    transform: scaleX(0.2) translateX(-100px);
-    opacity: 0;
-  }
+canvas {
+  display: block;
 }
 </style>
 
@@ -463,12 +431,8 @@ h1 {
 		</div>
 		<!-- //Header-Top-Bar-(Hidden) -->
 
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-<div>
-  <h1 class="cssanimation sequence leRotateSkateInLeft">cssanimation</h1>
-   <!--<h1 class="cssanimation leRotateSkateInLeft random">cssanimation</h1>
-  please uncomment if you want to see random version-->
-</div>
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:700,700italic' rel='stylesheet' type='text/css'>
+<canvas></canvas>
  
         <model-viewer camera-controls exposure="1.22" auto-rotate id="shadow-intensity-demo" shadow-intensity="1" shadow-softness="1" environment-image="hdr/blue_lagoon_01k.hdr" alt="A 3D model of a sphere reflecting a forest with varying shadow intensity" src="gltf/sour melody record LP fix4.glb"></model-viewer>
 
@@ -957,65 +921,97 @@ h1 {
   
 
 <script>
-window.onload = function() {
-    animateSequence();
-    animateRandom();
+var particleAlphabet = {
+  Particle: function(x, y) {
+    this.x = x;
+    this.y = y;
+    this.radius = 3.5;
+    this.draw = function(ctx) {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 0, this.radius, this.radius);
+      ctx.restore();
+    };
+  },
+  init: function() {
+    particleAlphabet.canvas = document.querySelector('canvas');
+    particleAlphabet.ctx = particleAlphabet.canvas.getContext('2d');
+    particleAlphabet.W = window.innerWidth;
+    particleAlphabet.H = window.innerHeight;
+    particleAlphabet.particlePositions = [];
+    particleAlphabet.particles = [];
+    particleAlphabet.tmpCanvas = document.createElement('canvas');
+    particleAlphabet.tmpCtx = particleAlphabet.tmpCanvas.getContext('2d');
+
+    particleAlphabet.canvas.width = particleAlphabet.W;
+    particleAlphabet.canvas.height = particleAlphabet.H;
+
+    setInterval(function(){
+      particleAlphabet.changeLetter();
+      particleAlphabet.getPixels(particleAlphabet.tmpCanvas, particleAlphabet.tmpCtx);
+    }, 1200);
+
+    particleAlphabet.makeParticles(1000);
+    particleAlphabet.animate();
+  }, 
+  currentPos: 0,
+  changeLetter: function() {
+    var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZ',
+      letters = letters.split('');
+    particleAlphabet.time = letters[particleAlphabet.currentPos];
+    particleAlphabet.currentPos++;
+    if (particleAlphabet.currentPos >= letters.length) {
+      particleAlphabet.currentPos = 0;
+    }
+  },
+  makeParticles: function(num) {
+    for (var i = 0; i <= num; i++) {
+      particleAlphabet.particles.push(new particleAlphabet.Particle(particleAlphabet.W / 2 + Math.random() * 400 - 200, particleAlphabet.H / 2 + Math.random() * 400 -200));
+    }
+  },
+  getPixels: function(canvas, ctx) {
+    var keyword = particleAlphabet.time,
+      gridX = 6,
+      gridY = 6;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.fillStyle = 'red';
+    ctx.font = 'italic bold 330px Noto Serif';
+    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 2 + 100);
+    var idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    var buffer32 = new Uint32Array(idata.data.buffer);
+    if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
+    for (var y = 0; y < canvas.height; y += gridY) {
+      for (var x = 0; x < canvas.width; x += gridX) {
+        if (buffer32[y * canvas.width + x]) {
+          particleAlphabet.particlePositions.push({x: x, y: y});
+        }
+      }
+    }
+  },
+  animateParticles: function() {
+    var p, pPos;
+    for (var i = 0, num = particleAlphabet.particles.length; i < num; i++) {
+      p = particleAlphabet.particles[i];
+      pPos = particleAlphabet.particlePositions[i];
+      if (particleAlphabet.particles.indexOf(p) === particleAlphabet.particlePositions.indexOf(pPos)) {
+      p.x += (pPos.x - p.x) * .3;
+      p.y += (pPos.y - p.y) * .3;
+      p.draw(particleAlphabet.ctx);
+    }
+    }
+  },
+  animate: function() {
+    requestAnimationFrame(particleAlphabet.animate);
+    particleAlphabet.ctx.fillStyle = 'rgba(23, 41, 58, .8)';
+    particleAlphabet.ctx.fillRect(0, 0, particleAlphabet.W, particleAlphabet.H);
+    particleAlphabet.animateParticles();
+  }
 };
 
-function animateSequence() {
-    var a = document.getElementsByClassName('sequence');
-    for (var i = 0; i < a.length; i++) {
-        var $this = a[i];
-        var letter = $this.innerHTML;
-        letter = letter.trim();
-        var str = '';
-        var delay = 100;
-        for (l = 0; l < letter.length; l++) {
-            if (letter[l] != ' ') {
-                str += '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[l] + '</span>';
-                delay += 150;
-            } else
-                str += letter[l];
-        }
-        $this.innerHTML = str;
-    }
-}
+window.onload = particleAlphabet.init;
 
-function animateRandom() {
-    var a = document.getElementsByClassName('random');
-    for (var i = 0; i < a.length; i++) {
-        var $this = a[i];
-        var letter = $this.innerHTML;
-        letter = letter.trim();
-        var delay = 70;
-        var delayArray = new Array;
-        var randLetter = new Array;
-        for (j = 0; j < letter.length; j++) {
-            while (1) {
-                var random = getRandomInt(0, (letter.length - 1));
-                if (delayArray.indexOf(random) == -1)
-                    break;
-            }
-            delayArray[j] = random;
-        }
-        for (l = 0; l < delayArray.length; l++) {
-            var str = '';
-            var index = delayArray[l];
-            if (letter[index] != ' ') {
-                str = '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[index] + '</span>';
-                randLetter[index] = str;
-            } else
-                randLetter[index] = letter[index];
-            delay += 80;
-        }
-        randLetter = randLetter.join("");
-        $this.innerHTML = randLetter;
-    }
-}
-
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 </script>
 
 <!-- Default-JavaScript --><script src="js/jquery-2.2.3.js"></script>
