@@ -5,6 +5,14 @@
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/ 
 /*-- Reset-Code --*/ 
+@font-face {
+    font-family: 'grid_fracture_regular';
+    src: url('https://github.com/jokersgotaposse/WEB/blob/a5b4d71778e3badf00eb31e50d63ae37eaa609e8/css/webfontkit-20210906-160446/grid-fracture-webfont.woff2') format('woff2'),
+         url('https://github.com/jokersgotaposse/WEB/blob/a5b4d71778e3badf00eb31e50d63ae37eaa609e8/css/webfontkit-20210906-160446/grid-fracture-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 #myVideo {
