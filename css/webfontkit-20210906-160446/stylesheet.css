@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'grid_fracture_regular';
-    src: url('grid-fracture-webfont.woff2') format('woff2'),
-         url('grid-fracture-webfont.woff') format('woff');
+    src: url('https://github.com/jokersgotaposse/WEB/blob/d5476aca63a2de86e2d9cb01818e85163718a335/css/webfontkit-20210906-160446/grid-fracture-webfont.woff2') format('woff2'),
+         url('https://github.com/jokersgotaposse/WEB/blob/d5476aca63a2de86e2d9cb01818e85163718a335/css/webfontkit-20210906-160446/grid-fracture-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
