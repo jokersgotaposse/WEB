@@ -486,11 +486,11 @@ var particleAlphabet = {
     canvas.height = window.innerHeight;
     ctx.fillStyle = 'red';
     ctx.font = 'italic bold 330px Noto Serif';
-    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 1, canvas.height / 1.2 + 10);
+    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.2 + 10);
     var idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
     var buffer32 = new Uint32Array(idata.data.buffer);
     if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
-    for (var y = 0; y < canvas.height; y += gridY) {
+    for (var y = -1; y < canvas.height; y += gridY) {
       for (var x = 0; x < canvas.width; x += gridX) {
         if (buffer32[y * canvas.width + x]) {
           particleAlphabet.particlePositions.push({x: x, y: y});
