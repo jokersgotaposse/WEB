@@ -475,7 +475,7 @@ var particleAlphabet = {
   },
   makeParticles: function(num) {
     for (var i = 0; i <= num; i++) {
-      particleAlphabet.particles.push(new particleAlphabet.Particle(particleAlphabet.W / 2 + Math.random() * 400 - 200, particleAlphabet.H / 2 + Math.random() * 400 -50));
+      particleAlphabet.particles.push(new particleAlphabet.Particle(particleAlphabet.W / 2 + Math.random() * 400 - 200, particleAlphabet.H / 2 + Math.random() * 400 -200));
     }
   },
   getPixels: function(canvas, ctx) {
@@ -486,7 +486,7 @@ var particleAlphabet = {
     canvas.height = window.innerHeight;
     ctx.fillStyle = 'red';
     ctx.font = 'italic bold 330px Noto Serif';
-    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.3 + 10);
+    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.5 + 1000);
     var idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
     var buffer32 = new Uint32Array(idata.data.buffer);
     if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
