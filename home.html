@@ -487,7 +487,7 @@ var particleAlphabet = {
     ctx.fillStyle = 'red';
     ctx.font = 'italic bold 330px Noto Serif';
     ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.5 + 10);
-    var idata = ctx.getImageData(0, -20, canvas.width, canvas.height);
+    var idata = ctx.getImageData(0, -10, canvas.width, canvas.height);
     var buffer32 = new Uint32Array(idata.data.buffer);
     if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
     for (var y = 0; y < canvas.height; y += gridY) {
