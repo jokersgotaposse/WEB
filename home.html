@@ -490,7 +490,7 @@ var particleAlphabet = {
     var idata = ctx.getImageData(0, -10, canvas.width, canvas.height);
     var buffer32 = new Uint32Array(idata.data.buffer);
     if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
-    for (var y = 0; y < canvas.height; y += gridY) {
+    for (var y = -20; y < canvas.height; y += gridY) {
       for (var x = 0; x < canvas.width; x += gridX) {
         if (buffer32[y * canvas.width + x]) {
           particleAlphabet.particlePositions.push({x: x, y: y});
