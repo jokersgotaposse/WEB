@@ -14,7 +14,7 @@
 
 }
 #myVideo {
-  position: relative;
+  position: static;
   right: 0;
   bottom: 0;
   width: 100%;
