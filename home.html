@@ -424,13 +424,9 @@ canvas {
         <model-viewer camera-controls exposure="1.22" auto-rotate id="shadow-intensity-demo" shadow-intensity="1" shadow-softness="1" environment-image="hdr/blue_lagoon_01k.hdr" alt="A 3D model of a sphere reflecting a forest with varying shadow intensity" src="gltf/sour melody record LP fix4.glb"></model-viewer>
 
 
-<script>
-// Get the video
-var video = document.getElementById("myVideo");
-</script>
 
  <video autoplay muted loop id="myVideo">
-  <source src="movies/james loop headphones480.mp4" type="video/mp4" width="420" height="315">
+  <source src="movies/james loop headphones480.mp4" type="video/mp4" >
 </video>   
           
 
@@ -911,7 +907,11 @@ var video = document.getElementById("myVideo");
 
 
 	<!-- Custom-JavaScript-File-Links -->
-  
+  <script>
+// Get the video
+var video = document.getElementById("myVideo");
+</script>
+
 
 <script>
 var particleAlphabet = {
