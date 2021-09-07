@@ -59,53 +59,67 @@
 <style>
 
 		model-viewer{
-		width: 1000px;
-		height: 1000px;
+		width: 1200px;
+		height: 1200px;
 		margin: 0 auto;
 
   }
 
+		@media screen and (max-width: 1000px) {
+		model-viewer{
+		width: 950px;
+		height: 95000px;
+		margin: 0 auto;
 		
+		}}
+		
+		@media screen and (max-width: 900px) {
+		model-viewer{
+		width: 8500px;
+		height: 850px;
+		margin: 0 auto;
+		
+		}}
 		
 	
 	
 	@media screen and (max-width: 800px) {
 		model-viewer{
-		width: 800px;
-		height: 800px;
+		width: 750px;
+		height: 750px;
 		margin: 0 auto;
 		
 		}}
 	@media screen and (max-width: 600px) {model-viewer{
-		width: 600px;
-		height: 600px;
+		width: 550px;
+		height: 550px;
 		margin: 0 auto;
 		
 		}}
 	@media screen and (max-width: 500px) {
 		model-viewer{
-		width: 500px;
-		height: 500px;
+		width: 450px;
+		height: 450px;
 		margin: 0 auto;
 		
 		}}
 	@media screen and (max-width: 400px) {
 		model-viewer{
-		width: 400px;
-		height: 400px;
+		width: 350px;
+		height: 350px;
 		margin: 0 auto;
 		
 		}}
 	@media screen and (max-width: 300px) {
 		model-viewer{
-		width: 300px;
-		height: 300px;
+		width: 250px;
+		height: 250px;
 		margin: 0 auto;
 		
 		}}
 	@media screen and (max-width: 200px) {model-viewer{
-		width: 200px;
-		height: 200px;
+		width: 175px;
+		height: 175px;
 		margin: 0 auto;
 		
 		}}
@@ -471,7 +485,7 @@ var particleAlphabet = {
     canvas.height = window.innerHeight;
     ctx.fillStyle = 'red';
     ctx.font = 'italic bold 330px Noto Serif';
-    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.5 + 10);
+    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.2 + 10);
     var idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
     var buffer32 = new Uint32Array(idata.data.buffer);
     if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
