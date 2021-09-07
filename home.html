@@ -481,12 +481,12 @@ var particleAlphabet = {
   getPixels: function(canvas, ctx) {
     var keyword = particleAlphabet.time,
       gridX = 6,
-      gridY = 6;
+      gridY = 2;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     ctx.fillStyle = 'red';
     ctx.font = 'italic bold 330px Noto Serif';
-    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.2 + 10);
+    ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 1.2 + 2);
     var idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
     var buffer32 = new Uint32Array(idata.data.buffer);
     if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
