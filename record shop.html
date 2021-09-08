@@ -591,7 +591,15 @@ body{
 
 	<!-- //Custom-JavaScript-File-Links -->
 
-		<!-- Bootstrap-JavaScript --> <script src="js/bootstrap.js"></script>
+	<div class="loader-wrapper">
+<span class="loader"><span class="loader-inner"></span></span>
+</div>
+<script>
+$(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+});
+
+</script>	<!-- Bootstrap-JavaScript --> <script src="js/bootstrap.js"></script>
 
 </body>
 <!-- //Body -->
