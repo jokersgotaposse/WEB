@@ -15,7 +15,9 @@
 				color: #2983ff;
 			}
 		</style>
-	</head>
+        <script src="stats.module.js"></script><script src="three.module.js"></script><script src="three.js"></script><script src="dat.gui.module.js"></script>
+	<script src="GLTFLoader.js"></script><script src="OrbitControls.js"></script>
+    </head>
 
 	<body>
 
@@ -29,11 +31,11 @@
 
 		<script type="module">
 
-			import * as THREE from '../build/three.module.js';
+			import * as THREE from 'three.module.js';
 
-			import Stats from './jsm/libs/stats.module.js';
+			import Stats from 'stats.module.js';
 
-			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+			import { OrbitControls } from 'OrbitControls.js';
 			import { RoomEnvironment } from './jsm/environments/RoomEnvironment.js';
 
 			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
